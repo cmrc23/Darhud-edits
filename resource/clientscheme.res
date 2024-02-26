@@ -1,5 +1,3 @@
-#base "../darhud_addons/customcolors.res"
-
 //
 // TRACKER SCHEME RESOURCE FILE
 //
@@ -16,12 +14,15 @@ Scheme
 	//{
 	//	"Name"	"ClientScheme"
 	//}
+
+	//////////////////////// COLORS ///////////////////////////
 	Colors
 	{
+		// base colors
 		"Orange"			"178 82 22 255"
 		"OrangeDim"			"178 82 22 120"
 		"LightOrange"		"188 112 0 128"
-		"GoalOrange"		"255 133 0 255"
+		"GoalOrange"		"255 133 0"
 		"TFOrange"			"145 73 59 255"
 		"Purple"			"137 69 99 255"
 
@@ -50,22 +51,20 @@ Scheme
 		"Yellow"			"251 235 202 255"
 		"TransparentYellow"	"251 235 202 140"
 		"BrightYellow"		"251 235 0 255"
+		//"Black"				"0 0 0 255"
+		//Changed black to a NTSC safe color
 		"GreenSolid"		 "76 107 34 255"
 		
-		//"Black"				"0 0 0 255" //Changed black to a NTSC safe color
 		"Black"				"46 43 42 255"
 		"TransparentBlack"	"0 0 0 196"
 		"TransparentLightBlack"	"0 0 0 90"
 		"FooterBGBlack"		"52 48 55 255"
-
 		
+		"HUDBlueTeam"		"104 124 155 127"
+		"HUDRedTeam"		"180 92 77 127"
 		"HUDSpectator"		"124 124 124 127"
-		
-		//Moved at the top of the file for easy customization
-		//"HUDBlueTeam"		"104 124 155 127"
-		//"HUDRedTeam"		"180 92 77 127"
-		//"HUDBlueTeamSolid"	"104 124 155 255"
-		//"HUDRedTeamSolid"	"180 92 77 255"
+		"HUDBlueTeamSolid"	"104 124 155 255"
+		"HUDRedTeamSolid"	"180 92 77 255"
 		"HUDDeathWarning"	"255 0 0 255"
 		"HudWhite"			"255 255 255 255"
 		"HudOffWhite"		"200 187 161 255"
@@ -106,8 +105,7 @@ Scheme
 		
 		// Building HUD Specific
 		"LowHealthRed"		"255 0 0 255"
-		//"ProgressOffWhite"	"251 235 202 255"
-		"ProgressOffWhite"	"255 255 255 255"
+		"ProgressOffWhite"	"251 235 202 255"
 		"ProgressBackground"	"250 234 201 51"
 		"HealthBgGrey"		"72 71 69 255"
 		
@@ -211,6 +209,7 @@ Scheme
 		"UpgradeDisabledFg"		"64 59 52 255"
 		"UpgradeDisabledBg"		"79 77 68 255"
 	}
+
 	///////////////////// BASE SETTINGS ////////////////////////
 	// default settings for all panels
 	// controls use these to determine their settings
@@ -230,33 +229,33 @@ Scheme
 		Replay.RenderDialog.BgColor							"LighterDarkBrown"
 		
 		Econ.Dialog.BgColor									"Blank"
-		Econ.Button.BgColor									"ButtonDefault"
-		Econ.Button.FgColor									"ButtonLabelDefault"
-		Econ.Button.ArmedBgColor							"ButtonArmed"
-		Econ.Button.ArmedFgColor							"ButtonLabelArmed"
-		Econ.Button.DepressedBgColor						"ButtonDefault"
-		Econ.Button.DepressedFgColor						"ButtonLabelDefault"
+		Econ.Button.BgColor									"TanDark"
+		Econ.Button.FgColor									"TanLight"
+		Econ.Button.ArmedBgColor							"TFOrange"
+		Econ.Button.ArmedFgColor							"TanLight"
+		Econ.Button.DepressedBgColor						"TFOrange"
+		Econ.Button.DepressedFgColor						"Black"
 		
-		Econ.Button.PresetDefaultColorFg					"ButtonLabelArmed"
-		Econ.Button.PresetArmedColorFg						"ButtonLabelArmedHovering"
-		Econ.Button.PresetDepressedColorFg					"ButtonLabelArmed"
+		Econ.Button.PresetDefaultColorFg					"TanLight"
+		Econ.Button.PresetArmedColorFg						"TanLight"
+		Econ.Button.PresetDepressedColorFg					"TanLight"
 		
-		Econ.Button.PresetDefaultColorBg					"ButtonArmed"
-		Econ.Button.PresetArmedColorBg						"ButtonArmedHovering"
-		Econ.Button.PresetDepressedColorBg					"ButtonArmed"
+		Econ.Button.PresetDefaultColorBg					"LighterRed"
+		Econ.Button.PresetArmedColorBg						"LightRed"
+		Econ.Button.PresetDepressedColorBg					"TFOrange"
 		
 		Border.Bright					"Blank"		// the lit side of a control
 		Border.Dark						"Black"		// the dark/unlit side of a control
 		Border.Selection				"Gray"			// the additional border color for displaying the default/selected button
 
-		Button.TextColor				"ButtonLabelDefault"
-		Button.BgColor					"ButtonDefault"
-		Button.ArmedTextColor			"ButtonLabelArmed"
-		Button.ArmedBgColor				"ButtonArmed"
-		Button.SelectedTextColor		"ButtonLabelHovering"
-		Button.SelectedBgColor			"ButtonArmed"
-		Button.DepressedTextColor		"ButtonLabelDefault"
-		Button.DepressedBgColor			"ButtonDefault"
+		Button.TextColor				"TanLight"
+		Button.BgColor					"TanDark"
+		Button.ArmedTextColor			"TanLight"
+		Button.ArmedBgColor				"TFOrange"
+		Button.SelectedTextColor		"TanLight"
+		Button.SelectedBgColor			"TFOrange"
+		Button.DepressedTextColor		"Black"
+		Button.DepressedBgColor			"TFOrange"
 
 		CheckButton.TextColor			"Yellow"
 		CheckButton.SelectedTextColor	"Yellow"
@@ -275,6 +274,8 @@ Scheme
 		Frame.OutOfFocusBgColor			"TransparentBlack"
 		Frame.FocusTransitionEffectTime	"0.0"	[$WIN32] // time it takes for a window to fade in/out on focus/out of focus
 		Frame.TransitionEffectTime		"0.0"	[$WIN32] // time it takes for a window to fade in/out on open/close
+		Frame.FocusTransitionEffectTime	"0.15"	[$X360] // time it takes for a window to fade in/out on focus/out of focus
+		Frame.TransitionEffectTime		"0.15"	[$X360] // time it takes for a window to fade in/out on open/close
 		Frame.AutoSnapRange				"0"
 		FrameGrip.Color1				"Blank"
 		FrameGrip.Color2				"Blank"
@@ -344,17 +345,15 @@ Scheme
 		RichText.SelectedTextColor		"Gray"
 		RichText.SelectedBgColor		"Red"
 
-		ScrollBarButton.FgColor				"White"
+		ScrollBarButton.FgColor				"Gray"
 		ScrollBarButton.BgColor				"Blank"
-		ScrollBarButton.ArmedFgColor		"White"
+		ScrollBarButton.ArmedFgColor		"Gray"
 		ScrollBarButton.ArmedBgColor		"Blank"
 		ScrollBarButton.DepressedFgColor	"Black"
 		ScrollBarButton.DepressedBgColor	"Blank"
 
-		ScrollBarSlider.FgColor				"White"		// nob color
+		ScrollBarSlider.FgColor				"Gray"		// nob color
 		ScrollBarSlider.BgColor				"Blank"		// slider background color
-
-		Scrollbar.Wide						"4"
 
 		SectionedListPanel.HeaderTextColor	"Orange"
 		SectionedListPanel.HeaderBgColor	"Blank"
@@ -447,7 +446,7 @@ Scheme
 		"Main.BottomBorder"	"32"
 		
 		"VguiScreenCursor"			"255 208 64 255"
-	}	
+	}
 
 	//////////////////////// BITMAP FONT FILES /////////////////////////////
 	//
@@ -465,176 +464,33 @@ Scheme
 	//
 	// describes all the fonts
 	Fonts
-	{		
+	{
 		// fonts are used in order that they are listed
 		// fonts listed later in the order will only be used if they fulfill a range not already filled
 		// if a font fails to load then the subsequent fonts will replace
-		"TF2Default"
-		{
-			"1"
-			{
-				"name"		"Verdana"
-				"tall"		"10"
-				"weight"	"900"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
-				"yres"	"480 599"
-			}
-			"2"
-			{
-				"name"		"Verdana"
-				"tall"		"12"
-				"weight"	"900"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
-				"yres"	"600 768"
-			}
-			"3"
-			{
-				"name"		"TF2 Secondary"
-				"tall"		"13"
-				"weight"	"900"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
-				"yres"	"769 1023"
-				"antialias"	"1"
-			}
-			"4"
-			{
-				"name"		"TF2 Secondary"
-				"tall"		"17"
-				"weight"	"900"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
-				"yres"	"1024 1199"
-				"antialias"	"1"
-			}
-			"5"
-			{
-				"name"		"TF2 Secondary"
-				"tall"		"22"
-				"weight"	"900"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
-				"yres"	"1200 6000"
-				"antialias"	"1"
-			}
-			"6"
-			{
-				"name"		"TF2 Secondary"
-				"tall"		"22"
-				"range" 		"0x0000 0x00FF"
-				"weight"		"900"
-			}
-			"7"
-			{
-				"name"		"TF2 Secondary"
-				"tall"		"22"
-				"range" 		"0x0000 0x00FF"
-				"weight"		"800"
-			}
-		}
-		"TF2DefaultSmall"
-		{
-			"1"
-			{
-				"name"		"Verdana"
-				"tall"		"10"
-				"weight"	"0"
-				"range"		"0x0000 0x017F"
-				"yres"	"480 599"
-			}
-			"2"
-			{
-				"name"		"Verdana"
-				"tall"		"13"
-				"weight"	"0"
-				"range"		"0x0000 0x017F"
-				"yres"	"600 768"
-			}
-			"3"
-			{
-				"name"		"TF2 Build"
-				"tall"		"11"
-				"weight"	"0"
-				"antialias"	"1"
-				"range"		"0x0000 0x017F"
-				"yres"	"769 1023"
-				"antialias"	"1"
-			}
-			"4"
-			{
-				"name"		"TF2 Build"
-				"tall"		"16"
-				"weight"	"0"
-				"antialias"	"1"
-				"range"		"0x0000 0x017F"
-				"yres"	"1024 1199"
-				"antialias"	"1"
-			}
-			"5"
-			{
-				"name"		"TF2 Build"
-				"tall"		"20"
-				"weight"	"0"
-				"antialias"	"1"
-				"range"		"0x0000 0x017F"
-				"yres"	"1200 6000"
-				"antialias"	"1"
-			}
-			"6"
-			{
-				"name"		"TF2 Build"
-				"tall"		"20"
-				"range" 		"0x0000 0x00FF"
-				"weight"		"0"
-				"antialias"	"1"
-			}
-		}
-		
-		TF2DefaultLarge
-		{
-			"1"
-			{
-				"name"		"TF2 Secondary"
-				"tall"		"9"
-				"weight"	"800"
-				"additive"	"0"
-				"antialias" "1"
-			}
-		}		
-		
-		"KillfeedFont"
-		{
-			"1"
-			{
-				"name"		"TF2 Secondary"
-				"tall"		"11"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias" "1"
-			}
-		}
-
-		//DEFAULT TF2 FONTS -- AVOID MESSING WITH
 		"Default"
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"12"
+				"name"		"TF2 Secondary"
+				"tall"		"22"
 				"weight"	"900"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"480 599"
 			}
 			"2"
 			{
-				"name"		"Verdana"
-				"tall"		"13"	[$WIN32]
-				"tall"		"20"	[$X360]
+				"name"		"TF2 Secondary"
+				"tall"		"22"	[$WIN32]
+				"tall"		"22"	[$X360]
 				"weight"	"900"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"600 767"
 			}
 			"3"
 			{
-				"name"		"Verdana"
-				"tall"		"14"
+				"name"		"TF2 Secondary"
+				"tall"		"22"
 				"weight"	"900"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"768 1023"
@@ -642,8 +498,8 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"Verdana"
-				"tall"		"20"
+				"name"		"TF2 Secondary"
+				"tall"		"22"
 				"weight"	"900"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"1024 1199"
@@ -651,8 +507,8 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"Verdana"
-				"tall"		"24"
+				"name"		"TF2 Secondary"
+				"tall"		"22"
 				"weight"	"900"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"1200 6000"
@@ -660,35 +516,35 @@ Scheme
 			}
 			"6"
 			{
-				"name"		"Verdana"
-				"tall"		"12"
+				"name"		"TF2 Secondary"
+				"tall"		"22"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"900"
 			}
 			"7"
 			{
-				"name"		"Arial"
-				"tall"		"12"
+				"name"		"TF2 Secondary"
+				"tall"		"22"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"800"
 			}
 
-
+			
 		}
 		"DefaultUnderline"
 		{
 			"1"
 			{
-				"name"		"Tahoma"
-				"tall"		"12"
+				"name"		"TF2 Secondary"
+				"tall"		"22"
 				"weight"	"500"
 				"underline" "1"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 			"2"
 			{
-				"name"		"Arial"
-				"tall"		"11"
+				"name"		"TF2 Secondary"
+				"tall"		"22"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"800"
 			}
@@ -697,24 +553,24 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"12"
+				"name"		"TF2 Build"
+				"tall"		"20"
 				"weight"	"0"
 				"range"		"0x0000 0x017F"
 				"yres"	"480 599"
 			}
 			"2"
 			{
-				"name"		"Verdana"
-				"tall"		"13"
+				"name"		"TF2 Build"
+				"tall"		"20"
 				"weight"	"0"
 				"range"		"0x0000 0x017F"
 				"yres"	"600 767"
 			}
 			"3"
 			{
-				"name"		"Verdana"
-				"tall"		"14"
+				"name"		"TF2 Build"
+				"tall"		"20"
 				"weight"	"0"
 				"range"		"0x0000 0x017F"
 				"yres"	"768 1023"
@@ -722,7 +578,7 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"Verdana"
+				"name"		"TF2 Build"
 				"tall"		"20"
 				"weight"	"0"
 				"range"		"0x0000 0x017F"
@@ -731,8 +587,8 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"Verdana"
-				"tall"		"22"
+				"name"		"TF2 Build"
+				"tall"		"20"
 				"weight"	"0"
 				"range"		"0x0000 0x017F"
 				"yres"	"1200 6000"
@@ -740,8 +596,8 @@ Scheme
 			}
 			"6"
 			{
-				"name"		"Arial"
-				"tall"		"12"
+				"name"		"TF2 Build"
+				"tall"		"20"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"0"
 			}
@@ -752,24 +608,24 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"12"
+				"name"		"TF2 Secondary"
+				"tall"		"14"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"480 599"
 			}
 			"2"
 			{
-				"name"		"Verdana"
-				"tall"		"12"
+				"name"		"TF2 Secondary"
+				"tall"		"14"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"600 767"
 			}
 			"3"
 			{
-				"name"		"Verdana"
-				"tall"		"12"
+				"name"		"TF2 Secondary"
+				"tall"		"14"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"768 1023"
@@ -777,7 +633,7 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"Verdana"
+				"name"		"TF2 Secondary"
 				"tall"		"14"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -786,8 +642,8 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"Verdana"
-				"tall"		"16"
+				"name"		"TF2 Secondary"
+				"tall"		"14"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"1200 6000"
@@ -798,24 +654,24 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"18"
+				"name"		"TF2 Secondary"
+				"tall"		"26"
 				"weight"	"900"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"		"480 599"
 			}
 			"2"
 			{
-				"name"		"Verdana"
-				"tall"		"21"
+				"name"		"TF2 Secondary"
+				"tall"		"26"
 				"weight"	"900"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"		"600 767"
 			}
 			"3"
 			{
-				"name"		"Verdana"
-				"tall"		"22"
+				"name"		"TF2 Secondary"
+				"tall"		"26"
 				"weight"	"900"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"		"768 1023"
@@ -823,8 +679,8 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"Verdana"
-				"tall"		"28"
+				"name"		"TF2 Secondary"
+				"tall"		"26"
 				"weight"	"900"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"		"1024 1199"
@@ -832,8 +688,8 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"Verdana"
-				"tall"		"30"
+				"name"		"TF2 Secondary"
+				"tall"		"26"
 				"weight"	"900"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"1200 6000"
@@ -841,15 +697,15 @@ Scheme
 			}
 			"6"
 			{
-				"name"		"Verdana"
-				"tall"		"20"
+				"name"		"TF2 Secondary"
+				"tall"		"26"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"900"
 			}
 			"7"
 			{
-				"name"		"Arial"
-				"tall"		"20"
+				"name"		"TF2 Secondary"
+				"tall"		"26"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"800"
 			}
@@ -859,8 +715,8 @@ Scheme
 			// note that this scales with the screen resolution
 			"1"
 			{
-				"name"		"Trebuchet MS" [!$OSX]
-				"name"		"Helvetica" [$OSX]
+				"name"		"TF2 Secondary" [!$OSX]
+				"name"		"TF2 Secondary" [$OSX]
 				"tall"		"18"
 				"weight"	"900"
 				"antialias" "1"
@@ -872,8 +728,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"6"
+				"name"		"TF2 Secondary"
+				"tall"		"14"
 				"weight"	"500"
 				"additive"	"0"
 				"antialias" "1"
@@ -883,37 +739,37 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"12"
+				"name"		"TF2 Secondary"
+				"tall"		"18"
 				"weight"	"700"
 				"yres"	"480 599"
 			}
 			"2"
 			{
-				"name"		"Verdana"
-				"tall"		"13"	[$WIN32]
-				"tall"		"23"	[$X360]
+				"name"		"TF2 Secondary"
+				"tall"		"18"	[$WIN32]
+				"tall"		"18"	[$X360]
 				"weight"	"700"
 				"yres"	"600 767"
 			}
 			"3"
 			{
-				"name"		"Verdana"
-				"tall"		"14"
+				"name"		"TF2 Secondary"
+				"tall"		"18"
 				"weight"	"700"
 				"yres"	"768 1023"
 			}
 			"4"
 			{
-				"name"		"Verdana"
-				"tall"		"20"
+				"name"		"TF2 Secondary"
+				"tall"		"18"
 				"weight"	"700"
 				"yres"	"1024 1199"
 			}
 			"5"
 			{
-				"name"		"Verdana"
-				"tall"		"24"
+				"name"		"TF2 Secondary"
+				"tall"		"18"
 				"weight"	"700"
 				"yres"	"1200 10000"
 			}
@@ -1016,7 +872,7 @@ Scheme
 				"additive"	"0"
 				"antialias" "1"
 			}
-		}
+		}	
 		"HudFontMediumBigBold"
 		{
 			"1"
@@ -1027,7 +883,7 @@ Scheme
 				"additive"	"0"
 				"antialias" "1"
 			}
-		}
+		}		
 		"HudFontMedium"
 		{
 			"1"
@@ -1110,7 +966,7 @@ Scheme
 				"additive"	"0"
 				"antialias" 	"1"
 			}
-		}
+		}	
 		"HudFontSmallishBold"
 		{
 			"1"
@@ -1156,34 +1012,24 @@ Scheme
 				"antialias" 	"1"
 			}
 		}
+		"HudFontSmallestShadow"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"11"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" 	"1"
+				"dropshadow"	"1"
+			}
+		}
 		"HudFontSmallestBold"
 		{
 			"1"
 			{
 				"name"		"TF2 Build"
 				"tall"		"11"
-				"weight"	"500"
-				"additive"	"0"
-				"antialias" "1"
-			}
-		}
-		"HudMenuNumberFont"
-		{
-			"1"
-			{
-				"name"		"TF2 Secondary"
-				"tall"		"15"
-				"weight"	"500"
-				"additive"	"0"
-				"antialias" "1"
-			}
-		}
-		"MatchmakingDialogMenuSmall"
-		{
-			"1"
-			{
-				"name"		"TF2 Secondary"
-				tall		"47"
 				"weight"	"500"
 				"additive"	"0"
 				"antialias" "1"
@@ -1356,28 +1202,6 @@ Scheme
 				"antialias" "1"
 			}
 		}
-		"HDRDemoText"
-		{
-			"1"
-			{
-				"name"		"TF2 Secondary"
-				"tall"		"24"
-				"weight"	"500"
-				"additive"	"0"
-				"antialias" "1"
-			}
-		}
-		"Ui"
-		{
-			"1"
-			{
-				"name"		"TF2 Secondary"
-				"tall"		"16"
-				"weight"	"500"
-				"additive"	"0"
-				"antialias" "1"
-			}
-		}
 		"HudClassHealth"
 		{
 			"1"
@@ -1395,7 +1219,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
+				"name"		"TF2 Secondary"
 				"tall"		"8"
 				"weight"	"500"
 				"additive"	"0"
@@ -1506,7 +1330,7 @@ Scheme
 				"weight"	"200"
 				"outline"	"1"
 			}
-		}
+		}		
 		TFTypeDeath
 		{
 			"1"
@@ -1518,7 +1342,7 @@ Scheme
 				"antialias" 	"1"
 			}
 		}
-
+		
 		Icons
 		{
 			"1"
@@ -1566,62 +1390,57 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"TF2"
+				"name"		"Tahoma"
 				"tall"		"24"
 				"tall_hidef"	"32"
 				"weight"	"500"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
-				"antialias"	"1"
 			}
 		}
 		"CloseCaption_Italic"
 		{
 			"1"
 			{
-				"name"		"TF2"
+				"name"		"Tahoma"
 				"tall"		"24"
 				"tall_hidef"	"32"
 				"weight"	"500"
 				"italic"	"1"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
-				"antialias"	"1"
 			}
 		}
 		"CloseCaption_Bold"
 		{
 			"1"
 			{
-				"name"		"TF2 Build"
+				"name"		"Tahoma"
 				"tall"		"24"
 				"tall_hidef"	"32"
 				"weight"	"900"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
-				"antialias"	"1"
 			}
 		}
 		"CloseCaption_BoldItalic"
 		{
 			"1"
 			{
-				"name"		"TF2 Build"
+				"name"		"Tahoma"
 				"tall"		"24"
 				"tall_hidef"	"32"
 				"weight"	"900"
 				"italic"	"1"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
-				"antialias"	"1"
 			}
 		}
 		"CloseCaption_Small"
 		{
 			"1"
 			{
-				"name"		"TF2 Secondary"
+				"name"		"Tahoma"
 				"tall"		"16"
 				"tall_hidef"	"24"
 				"weight"	"900"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
-				"antialias"	"1"
 			}
 		}
 
@@ -1679,27 +1498,7 @@ Scheme
 				"weight"	"500"
 			}
 		}
-		"MenuMedium"
-		{
-			"1"
-			{
-				"name"		"TF2"
-				"tall"		"15"
-				"antialias" "1"
-				"weight"	"500"
-			}
-		}
-		"MenuSmall"
-		{
-			"1"
-			{
-				"name"		"TF2"
-				"tall"		"15"
-				"antialias" "1"
-				"weight"	"500"
-			}
-		}
-
+		
 		"GoalText"
 		{
 			"1"
@@ -1712,8 +1511,8 @@ Scheme
 				"additive"	"0"
 				"antialias" 	"1"
 			}
-		}
-
+		}		
+		
 		"ChalkboardTitle"
 		{
 			"1"
@@ -1722,7 +1521,7 @@ Scheme
 				"tall"			"28"
 				"tall_lodef"	"48"
 				"tall_hidef"	"48"
-				"antialias"		"1"
+				"antialias"		"1" 
 				"custom"		"1" [$OSX]
 				"weight"		"500"
 				"weight_lodef"	"800"
@@ -1775,8 +1574,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"6"
+				"name"		"TF2 Secondary"
+				"tall"		"8"
 				"weight"	"400"
 				"additive"	"0"
 				"antialias" "1"
@@ -1786,10 +1585,10 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"8"
+				"name"		"TF2 Secondary"
+				"tall"		"10"
 				"tall_hidef"	"10"
-				"tall_lodef"	"14"
+				"tall_lodef"	"10"
 				"weight"	"400"
 				"additive"	"0"
 				"antialias" "1"
@@ -1802,7 +1601,7 @@ Scheme
 				"name"		"TF2 Secondary"
 				"tall"		"10"
 				"tall_hidef"	"12"
-				"tall_lodef"	"14"
+				"tall_lodef"	"12"
 				"weight"	"400"
 				"additive"	"0"
 				"antialias" "1"
@@ -1838,8 +1637,8 @@ Scheme
 			{
 				"name"		"TF2 Secondary"
 				"tall"		"20"
-				"tall_hidef"	"24"
-				"tall_lodef"	"24"
+				"tall_hidef"	"20"
+				"tall_lodef"	"20"
 				"weight"	"500"
 				"range"		"0x0000 0x007F"	//	Basic Latin
 				"antialias" "1"
@@ -1986,7 +1785,7 @@ Scheme
 			"1"
 			{
 				"name"		"TF2 Secondary"
-				"tall"		"14"
+				"tall"		"12"
 				"weight"	"400"
 				"additive"	"0"
 				"antialias" "1"
@@ -2028,7 +1827,7 @@ Scheme
 				"antialias" "1"
 			}
 		}
-
+		
 		"TargetID"
 		{
 			"1"
@@ -2170,8 +1969,8 @@ Scheme
 				"weight"		"300"
 				"antialias"		"1"
 			}
-		}
-
+		}	
+		
 		MenuSmallFont
 		{
 			"1"
@@ -2184,7 +1983,7 @@ Scheme
 				"weight_lodef"	"600"
 				"antialias"		"1"
 			}
-		}
+		}			
 		CapPlayerFont
 		{
 			"1"
@@ -2214,42 +2013,43 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"8"
-				"tall_hidef"	"10"
-				"tall_lodef"	"12"
+				"name"		"TF2 Build"
+				"tall"		"9"
+				"tall_hidef"	"9"
+				"tall_lodef"	"9"
 				"weight"	"0"
 				"additive"	"1"
+				"TextColor"	"ProgressOffWhite"
 				"antialias" 	"1"
 			}
-		}
+		}		
 		TFFontMedium
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"9"
+				"name"		"TF2 Secondary"
+				"tall"		"14"
 				"tall_hidef"	"10"
 				"tall_lodef"	"16"
 				"weight"	"400"
 				"additive"	"0"
 				"antialias" 	"1"
 			}
-		}
-
+		}		
+		
 		InstructionalText
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"11"  [!$OSX]
-				"tall"		"9"  [$OSX]
+				"name"		"TF2 Secondary"
+				"tall"		"12"  [!$OSX]
+				"tall"		"12"  [$OSX]
 				"weight"	"800"
 				"additive"	"0"
 				"antialias" 	"1"
 			}
-		}
-
+		}		
+		
 		MatchmakingDialogTitle
 		{
 			"1"
@@ -2297,7 +2097,7 @@ Scheme
 				"tall"		"18"
 				"weight"	"900"
 			}
-		}
+		}		
 		MatchmakingDialogMenuMedium
 		{
 			"1"
@@ -2345,7 +2145,7 @@ Scheme
 				"weight"	"900"
 			}
 		}
-
+		
 		"TeamMenuBold"
 		{
 			"1"
@@ -2367,7 +2167,7 @@ Scheme
 				"additive"	"0"
 				"antialias" 	"1"
 			}
-		}
+		}		
 		"IntroMenuCaption"
 		{
 			"1"
@@ -2378,13 +2178,13 @@ Scheme
 				"additive"	"0"
 				"antialias" 	"1"
 			}
-		}
+		}			
 		"AchievementNotification"
 		{
 			"1"
 			{
-				"name"		"Trebuchet MS"
-				"tall"		"14"
+				"name"		"TF2 Secondary"
+				"tall"		"18"
 				"weight"	"900"
 				"antialias" "1"
 			}
@@ -2393,8 +2193,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"10"
+				"name"		"TF2 Secondary"
+				"tall"		"14"
 				"weight"	"600"
 				"additive"	"0"
 				"antialias" 	"1"
@@ -2404,8 +2204,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"10"
+				"name"		"TF2 Secondary"
+				"tall"		"12"
 				"weight"	"500"
 				"additive"	"0"
 				"antialias" 	"1"
@@ -2415,8 +2215,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"7"
+				"name"		"TF2 Secondary"
+				"tall"		"10"
 				"weight"	"400"
 				"additive"	"0"
 				"antialias" "1"
@@ -2453,7 +2253,7 @@ Scheme
 				"antialias"	"1"
 			}
 		}
-
+		
 		"ItemFontNameSmallest"
 		{
 			"1"
@@ -2503,7 +2303,7 @@ Scheme
 			"1"
 			{
 				"name"		"TF2 Secondary"
-				"tall"		"7"
+				"tall"		"9"
 				"weight"	"500"
 				"additive"	"0"
 				"antialias" 	"1"
@@ -2513,8 +2313,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"8"
+				"name"		"TF2 Secondary"
+				"tall"		"9"
 				"antialias" "1"
 				"weight"	"500"
 			}
@@ -2524,7 +2324,7 @@ Scheme
 			"1"
 			{
 				"name"		"TF2 Secondary"
-				"tall"		"8"
+				"tall"		"9"
 				"weight"	"500"
 				"additive"	"0"
 				"antialias" 	"1"
@@ -2540,19 +2340,19 @@ Scheme
 				"additive"	"0"
 				"antialias" 	"1"
 			}
-		}
+		}	
 		"ItemFontAttribLarger"
 		{
 			"1"
 			{
 				"name"		"TF2 Secondary"
-				"tall"		"14"
+				"tall"		"11"
 				"weight"	"500"
 				"additive"	"0"
 				"antialias" 	"1"
 			}
 		}
-
+		
 		"AchievementTracker_Name"
 		{
 			"1"
@@ -2580,8 +2380,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"7"
+				"name"		"TF2 Secondary"
+				"tall"		"9"
 				"weight"	"0"
 				"additive"	"1"
 				"antialias" 	"1"
@@ -2591,8 +2391,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"7"
+				"name"		"TF2 Secondary"
+				"tall"		"8"
 				"weight"	"0"
 				"additive"	"1"
 				"antialias" 	"1"
@@ -2602,8 +2402,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"7"
+				"name"		"TF2 Secondary"
+				"tall"		"12"
 				"weight"	"0"
 				"antialias" 	"1"
 			}
@@ -2612,8 +2412,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"7"
+				"name"		"TF2 Secondary"
+				"tall"		"12"
 				"weight"	"0"
 				"blur"		"3"
 				"additive"	"1"
@@ -2624,8 +2424,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"7"
+				"name"		"TF2 Secondary"
+				"tall"		"10"
 				"weight"	"0"
 				"antialias" 	"1"
 			}
@@ -2656,7 +2456,7 @@ Scheme
 			"3"
 			{
 				"name"		"OCR A Extended" [$WINDOWS]
-				"name"		"ocra"
+				"name"		"ocra"	
 				"tall"		"18"
 				"weight"	"400"
 				"additive"	"0"
@@ -2698,7 +2498,7 @@ Scheme
 				"antialias"	"1"
 			}
 		}
-
+		
 		"QuestLargeText"
 		{
 			"1"
@@ -2831,7 +2631,7 @@ Scheme
 				"antialias" "1"
 			}
 		}
-
+		
 		"QuestLargeText_Merasmus"
 		{
 			"1"
@@ -2855,13 +2655,13 @@ Scheme
 				"antialias" "1"
 			}
 		}
-
+		
 		"AdFont_AdText"
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"8"
+				"name"		"TF2 Secondary"
+				"tall"		"10"
 				"weight"	"400"
 				"additive"	"0"
 				"antialias" "1"
@@ -2871,8 +2671,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"8"
+				"name"		"TF2 Secondary"
+				"tall"		"10"
 				"weight"	"0"
 				"antialias" 	"1"
 			}
@@ -2882,8 +2682,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"8"
+				"name"		"TF2 Secondary"
+				"tall"		"10"
 				"weight"	"400"
 				"antialias" "1"
 				"additive"	"0"
@@ -2894,15 +2694,15 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Trebuchet MS"
-				"tall"		"9"
+				"name"		"TF2 Secondary"
+				"tall"		"10"
 				"weight"	"400"
 				"antialias" "1"
 				"additive"	"0"
 				"italic"	"1"
 			}
 		}
-
+		
 		//
 		//////////////////// REPLAY FONTS //////////////////////////////
 		//
@@ -3075,7 +2875,7 @@ Scheme
 				"antialias" "1"
 			}
 		}
-
+		
 		//
 		//////////////////// ECON FONTS //////////////////////////////
 		//
@@ -3183,7 +2983,7 @@ Scheme
 			"1"
 			{
 				"name"		"OCR A Extended" [$WINDOWS]
-				"name"		"ocra"
+				"name"		"ocra"		
 				"tall"		"7"
 				"weight"	"400"
 				"additive"	"0"
@@ -3229,302 +3029,14 @@ Scheme
 				"antialias" "1"
 			}
 		}
-	}	
+	}
+
 	//
 	//////////////////// BORDERS //////////////////////////////
 	//
-	// describes all the border typesBorders
+	// describes all the border types
 	Borders
-    {
-        TFFatLineBorderOpaque
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-			
-			"image"					"replay/thumbnails/square_shadow"
-			"src_corner_height"		"23"				// pixels inside the image
-			"src_corner_width"		"23"
-			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"5"	
-		}
-		TFFatLineBorder
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-			
-			"image"					"replay/thumbnails/square_shadow"
-			"src_corner_height"		"23"				// pixels inside the image
-			"src_corner_width"		"23"
-			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"5"	
-		}
-		TFFatLineBorderRedBGOpaque
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-			
-			"image"					"replay/thumbnails/square_red"
-			"src_corner_height"		"23"				// pixels inside the image
-			"src_corner_width"		"23"
-			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"5"	
-		}
-		TFFatLineBorderRedBGOpaque_Store
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-			
-			"image"					"replay/thumbnails/square_red"
-			"src_corner_height"		"24"				// pixels inside the image
-			"src_corner_width"		"24"
-			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"11"	
-		}
-		TFFatLineBorderRedBG
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-			
-			"image"					"replay/thumbnails/square_red"
-			"src_corner_height"		"23"				// pixels inside the image
-			"src_corner_width"		"23"
-			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"5"	
-		}
-		TFFatLineBorderRedBGMoreOpaque
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-			
-			"image"					"replay/thumbnails/square_red"
-			"src_corner_height"		"23"				// pixels inside the image
-			"src_corner_width"		"23"
-			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"5"	
-		}
-		TFFatLineBorderBlueBG
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-			
-			"image"					"replay/thumbnails/square_blue"
-			"src_corner_height"		"23"				// pixels inside the image
-			"src_corner_width"		"23"
-			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"5"	
-		}
-		TFFatLineBorderBlueBGMoreOpaque
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-			
-			"image"					"replay/thumbnails/square_blue"
-			"src_corner_height"		"23"				// pixels inside the image
-			"src_corner_width"		"23"
-			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"5"	
-		}
-		TFFatLineBorderBlueBGOpaque
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-			
-			"image"					"replay/thumbnails/square_blue"
-			"src_corner_height"		"23"				// pixels inside the image
-			"src_corner_width"		"23"
-			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"5"	
-		}
-		TFFatLineBorderClearBG
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-			
-			"image"					"../hud/color_panel_clear"
-			"src_corner_height"		"23"				// pixels inside the image
-			"src_corner_width"		"23"
-			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"5"	
-		}
-
-		// BUTTONS
-		customMainMenuButtonGradient
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-							
-			"image"					"replay/thumbnails/mainmenu/button_gradient"	
-			"color"					"ButtonDefault"
-			"src_corner_height"		"32"				// pixels inside the image
-			"src_corner_width"		"32"
-			"draw_corner_width"		"4"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"4"	
-		}
-		customMainMenuButtonGradientArmed
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-							
-			"image"					"replay/thumbnails/mainmenu/button_gradient"	
-			"color"					"ButtonArmed"
-			"src_corner_height"		"32"				// pixels inside the image
-			"src_corner_width"		"32"
-			"draw_corner_width"		"4"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"4"	
-		}		
-		
-		customMainMenuButtonItems
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-							
-			"image"					"replay/thumbnails/mainmenu/button_items"	
-			"color"					"ButtonMM"
-		}
-		customMainMenuButtonItemsArmed
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-							
-			"image"					"replay/thumbnails/mainmenu/button_items"	
-			"color"					"ButtonArmedMM"
-		}
-				
-		customMainMenuButtonShop
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-							
-			"image"					"replay/thumbnails/mainmenu/button_shop"	
-			"color"					"ButtonMM"
-		}
-		
-		customMainMenuButtonShopArmed
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-							
-			"image"					"replay/thumbnails/mainmenu/button_shop"	
-			"color"					"ButtonArmedMM"
-		}		
-		
-		customMainMenuButtonOptions
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-							
-			"image"					"replay/thumbnails/mainmenu/button_options"	
-			"color"					"ButtonMM"
-		}
-		
-		customMainMenuButtonOptionsArmed
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-							
-			"image"					"replay/thumbnails/mainmenu/button_options"	
-			"color"					"ButtonArmedMM"
-		}		
-		
-		customMainMenuButtonAdvOptions
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-							
-			"image"					"replay/thumbnails/mainmenu/button_adv_options"	
-			"color"					"ButtonMM"
-		}
-		
-		customMainMenuButtonAdvOptionsArmed
-		{
-			"bordertype"			"scalable_image"
-			"backgroundtype"		"2"
-							
-			"image"					"replay/thumbnails/mainmenu/button_adv_options"		
-			"color"					"ButtonArmedMM"
-		}
-		
-		// BORDERS
-		SelectedTabBorder
-		{
-			"inset" "0 0 1 1"
-			Left
-			{
-				"1"
-				{
-					"color" "ButtonArmed"
-					"offset" "0 1"
-				}				
-				"2"
-				{
-					"color" "ButtonArmed"
-					"offset" "0 1"
-				}				
-				"3"
-				{
-					"color" "ButtonArmed"
-					"offset" "0 1"
-				}				
-				"4"
-				{
-					"color" "ButtonArmed"
-					"offset" "0 1"
-				}
-			}
-
-			Right
-			{
-				"1"
-				{
-					"color" "ButtonArmed"
-					"offset" "1 1"
-				}				
-				"2"
-				{
-					"color" "ButtonArmed"
-					"offset" "1 1"
-				}				
-				"3"
-				{
-					"color" "ButtonArmed"
-					"offset" "1 1"
-				}				
-				"4"
-				{
-					"color" "ButtonArmed"
-					"offset" "1 1"
-				}
-			}
-
-			Top
-			{
-				"1"
-				{
-					"color" "ButtonArmed"
-					"offset" "0 0"
-				}				
-				"2"
-				{
-					"color" "ButtonArmed"
-					"offset" "0 0"
-				}				
-				"3"
-				{
-					"color" "ButtonArmed"
-					"offset" "0 0"
-				}				
-				"4"
-				{
-					"color" "ButtonArmed"
-					"offset" "0 0"
-				}
-			}
-		}
-
-
-	
-	//DEFAULT TF2 BORDERS -- AVOID MESSING WITH
-
+	{
 		NoBorder
 		{
 			"inset" "0 0 0 0"
@@ -3794,28 +3306,6 @@ Scheme
 					"offset" "1 0"
 				}
 			}
-		}		
-		
-		MainMenuSubButtonBorderVertical
-		{
-			"inset" "0 0 1 1"
-			Top
-			{
-				"1"
-				{
-					"color" "TanDarker"
-					"offset" "0 1"
-				}
-			}
-
-			Bottom
-			{
-				"1"
-				{
-					"color" "TanDarker"
-					"offset" "1 0"
-				}
-			}
 		}
 		
 		CrosshatchedBackground
@@ -3861,116 +3351,116 @@ Scheme
 			"draw_corner_width"		"8"				// screen size of the corners ( and sides ), proportional
 			"draw_corner_height" 	"8"	
 		}
-		// TFFatLineBorderOpaque
-		// {
-		// 	"bordertype"			"scalable_image"
-		// 	"backgroundtype"		"2"
+		TFFatLineBorderOpaque
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
 			
-		// 	"image"					"../hud/color_panel_brown_opaque"
-		// 	"src_corner_height"		"23"				// pixels inside the image
-		// 	"src_corner_width"		"23"
-		// 	"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-		// 	"draw_corner_height" 	"5"	
-		// }
-		// TFFatLineBorder
-		// {
-		// 	"bordertype"			"scalable_image"
-		// 	"backgroundtype"		"2"
+			"image"					"../hud/color_panel_brown_opaque"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		TFFatLineBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
 			
-		// 	"image"					"../hud/color_panel_brown"
-		// 	"src_corner_height"		"23"				// pixels inside the image
-		// 	"src_corner_width"		"23"
-		// 	"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-		// 	"draw_corner_height" 	"5"	
-		// }
-		// TFFatLineBorderRedBGOpaque
-		// {
-		// 	"bordertype"			"scalable_image"
-		// 	"backgroundtype"		"2"
+			"image"					"../hud/color_panel_brown"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		TFFatLineBorderRedBGOpaque
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
 			
-		// 	"image"					"../hud/color_panel_red_opaque"
-		// 	"src_corner_height"		"23"				// pixels inside the image
-		// 	"src_corner_width"		"23"
-		// 	"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-		// 	"draw_corner_height" 	"5"	
-		// }
-		// TFFatLineBorderRedBGOpaque_Store
-		// {
-		// 	"bordertype"			"scalable_image"
-		// 	"backgroundtype"		"2"
+			"image"					"../hud/color_panel_red_opaque"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		TFFatLineBorderRedBGOpaque_Store
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
 			
-		// 	"image"					"../hud/color_panel_red_opaque"
-		// 	"src_corner_height"		"24"				// pixels inside the image
-		// 	"src_corner_width"		"24"
-		// 	"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
-		// 	"draw_corner_height" 	"11"	
-		// }
-		// TFFatLineBorderRedBG
-		// {
-		// 	"bordertype"			"scalable_image"
-		// 	"backgroundtype"		"2"
+			"image"					"../hud/color_panel_red_opaque"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		TFFatLineBorderRedBG
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
 			
-		// 	"image"					"../hud/color_panel_red"
-		// 	"src_corner_height"		"23"				// pixels inside the image
-		// 	"src_corner_width"		"23"
-		// 	"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-		// 	"draw_corner_height" 	"5"	
-		// }
-		// TFFatLineBorderRedBGMoreOpaque
-		// {
-		// 	"bordertype"			"scalable_image"
-		// 	"backgroundtype"		"2"
+			"image"					"../hud/color_panel_red"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		TFFatLineBorderRedBGMoreOpaque
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
 			
-		// 	"image"					"../hud/color_panel_red_more_opaque"
-		// 	"src_corner_height"		"23"				// pixels inside the image
-		// 	"src_corner_width"		"23"
-		// 	"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-		// 	"draw_corner_height" 	"5"	
-		// }
-		// TFFatLineBorderBlueBG
-		// {
-		// 	"bordertype"			"scalable_image"
-		// 	"backgroundtype"		"2"
+			"image"					"../hud/color_panel_red_more_opaque"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		TFFatLineBorderBlueBG
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
 			
-		// 	"image"					"../hud/color_panel_blu"
-		// 	"src_corner_height"		"23"				// pixels inside the image
-		// 	"src_corner_width"		"23"
-		// 	"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-		// 	"draw_corner_height" 	"5"	
-		// }
-		// TFFatLineBorderBlueBGMoreOpaque
-		// {
-		// 	"bordertype"			"scalable_image"
-		// 	"backgroundtype"		"2"
+			"image"					"../hud/color_panel_blu"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		TFFatLineBorderBlueBGMoreOpaque
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
 			
-		// 	"image"					"../hud/color_panel_blu_more_opaque"
-		// 	"src_corner_height"		"23"				// pixels inside the image
-		// 	"src_corner_width"		"23"
-		// 	"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-		// 	"draw_corner_height" 	"5"	
-		// }
-		// TFFatLineBorderBlueBGOpaque
-		// {
-		// 	"bordertype"			"scalable_image"
-		// 	"backgroundtype"		"2"
+			"image"					"../hud/color_panel_blu_more_opaque"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		TFFatLineBorderBlueBGOpaque
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
 			
-		// 	"image"					"../hud/color_panel_blu_opaque"
-		// 	"src_corner_height"		"23"				// pixels inside the image
-		// 	"src_corner_width"		"23"
-		// 	"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-		// 	"draw_corner_height" 	"5"	
-		// }
-		// TFFatLineBorderClearBG
-		// {
-		// 	"bordertype"			"scalable_image"
-		// 	"backgroundtype"		"2"
+			"image"					"../hud/color_panel_blu_opaque"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		TFFatLineBorderClearBG
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
 			
-		// 	"image"					"../hud/color_panel_clear"
-		// 	"src_corner_height"		"23"				// pixels inside the image
-		// 	"src_corner_width"		"23"
-		// 	"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-		// 	"draw_corner_height" 	"5"	
-		// }
+			"image"					"../hud/color_panel_clear"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
 
 		ToolTipBorder
 		{
@@ -4093,7 +3583,7 @@ Scheme
 			"src_corner_height"		"32"				// pixels inside the image
 			"src_corner_width"		"32"
 			"draw_corner_width"		"4"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"4"
+			"draw_corner_height" 	"4"	
 		}
 		
 		BackpackItemGrayedOut
@@ -4102,11 +3592,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"Black"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
 		}
 		
 		BackpackItemGrayedOut_Selected
@@ -4115,7 +3605,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"Black"
 			
-			"image"					"replay/thumbnails/square_white"		
+			"image"					"backpack_rect_selected"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
 		}
 		
 		// Standard ------------------------------------------------------------------------------------------------
@@ -4123,29 +3617,34 @@ Scheme
 		{
 			"bordertype"			"scalable_image"
 			"backgroundtype"		"2"
-			"color"					"Black"
 			
-			"image"					"replay/thumbnails/square_white"	
+			"image"					"backpack_rect"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
 		}
 		BackpackItemMouseOverBorder
 		{
 			"bordertype"			"scalable_image"
 			"backgroundtype"		"2"
-			"color"					"Black"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
 		}
 		BackpackItemSelectedBorder
 		{
 			"bordertype"			"scalable_image"
 			"backgroundtype"		"2"
-			"color"					"ButtonArmed"
 			
-			"image"					"replay/thumbnails/square_white"
+			"image"					"backpack_rect_selected"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
 		}
 		BackpackItemGreyedOutBorder
 		{
@@ -4153,7 +3652,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"Black"
 			
-			"image"					"replay/thumbnails/square_white"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
 		}
 		BackpackItemGreyedOutSelectedBorder
 		{
@@ -4161,11 +3664,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"Black"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_selected"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
 		}
 		
 		// Unique ------------------------------------------------------------------------------------------------
@@ -4175,11 +3678,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorUnique"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_Unique
 		{
@@ -4187,11 +3690,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorUnique"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_Unique
 		{
@@ -4199,11 +3702,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorUnique_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_Unique
 		{
@@ -4211,11 +3714,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorUnique_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 
 		// Rarity1 ------------------------------------------------------------------------------------------------
@@ -4225,11 +3728,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity1"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_1
 		{
@@ -4237,11 +3740,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity1"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_1
 		{
@@ -4249,11 +3752,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity1_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_1
 		{
@@ -4261,11 +3764,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity1_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 
 		// Rarity2 ------------------------------------------------------------------------------------------------
@@ -4275,11 +3778,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity2"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_2
 		{
@@ -4287,11 +3790,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity2"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_2
 		{
@@ -4299,11 +3802,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity2_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_2
 		{
@@ -4311,11 +3814,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity2_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 
 		// Rarity3 ------------------------------------------------------------------------------------------------
@@ -4325,11 +3828,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity3"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_3
 		{
@@ -4337,11 +3840,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity3"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_3
 		{
@@ -4349,11 +3852,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity3_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_3
 		{
@@ -4361,11 +3864,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity3_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 
 		// Rarity4 ------------------------------------------------------------------------------------------------
@@ -4375,11 +3878,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity4"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_4
 		{
@@ -4387,11 +3890,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity4"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_4
 		{
@@ -4399,11 +3902,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity4_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_4
 		{
@@ -4411,11 +3914,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorrarity4_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 
 		// Haunted ------------------------------------------------------------------------------------------------
@@ -4425,11 +3928,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorHaunted"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_Haunted
 		{
@@ -4437,11 +3940,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorHaunted"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_Haunted
 		{
@@ -4449,11 +3952,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorHaunted_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_Haunted
 		{
@@ -4461,11 +3964,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorHaunted_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 
 		// PaintkitWeapon ------------------------------------------------------------------------------------------------
@@ -4475,11 +3978,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorPaintkitWeapon"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_PaintkitWeapon
 		{
@@ -4487,11 +3990,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorPaintkitWeapon"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_PaintkitWeapon
 		{
@@ -4499,11 +4002,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorPaintkitWeapon_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_PaintkitWeapon
 		{
@@ -4511,11 +4014,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorPaintkitWeaponGreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		
 		// Collector's ------------------------------------------------------------------------------------------------
@@ -4525,11 +4028,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCollectors"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_Collectors
 		{
@@ -4537,11 +4040,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCollectors"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_Collectors
 		{
@@ -4549,11 +4052,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCollectors_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_Collectors
 		{
@@ -4561,11 +4064,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCollectors_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 
 		// Vintage ------------------------------------------------------------------------------------------------
@@ -4575,11 +4078,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorVintage"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_Vintage
 		{
@@ -4587,11 +4090,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorVintage"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_Vintage
 		{
@@ -4599,11 +4102,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorVintage_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_Vintage
 		{
@@ -4611,11 +4114,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorVintage_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 
 		// Community ------------------------------------------------------------------------------------------------
@@ -4625,11 +4128,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCommunity"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_Community
 		{
@@ -4637,11 +4140,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCommunity"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_Community
 		{
@@ -4649,11 +4152,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCommunity_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_Community
 		{
@@ -4661,11 +4164,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCommunity_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 
 		// Developer ------------------------------------------------------------------------------------------------
@@ -4675,11 +4178,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorDeveloper"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_Developer
 		{
@@ -4687,11 +4190,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorDeveloper"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_Developer
 		{
@@ -4699,11 +4202,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorDeveloper_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_Developer
 		{
@@ -4711,11 +4214,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorDeveloper_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 
 		// SelfMade ------------------------------------------------------------------------------------------------
@@ -4725,11 +4228,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorSelfMade"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_SelfMade
 		{
@@ -4737,11 +4240,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorSelfMade"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_SelfMade
 		{
@@ -4749,11 +4252,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorSelfMade_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_SelfMade
 		{
@@ -4761,11 +4264,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorSelfMade_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 
 		// Customized ------------------------------------------------------------------------------------------------
@@ -4775,11 +4278,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCustomized"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_Customized
 		{
@@ -4787,11 +4290,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCustomized"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_Customized
 		{
@@ -4799,11 +4302,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCustomized_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_Customized
 		{
@@ -4811,11 +4314,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCustomized_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 
 		// Strange ------------------------------------------------------------------------------------------------
@@ -4825,11 +4328,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorStrange"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_Strange
 		{
@@ -4837,11 +4340,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorStrange"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_Strange
 		{
@@ -4849,11 +4352,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorStrange_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_Strange
 		{
@@ -4861,11 +4364,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorStrange_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 
 		// Completed ------------------------------------------------------------------------------------------------
@@ -4875,11 +4378,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCompleted"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_Completed
 		{
@@ -4887,11 +4390,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCompleted"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_Completed
 		{
@@ -4899,11 +4402,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCompleted_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_Completed
 		{
@@ -4911,11 +4414,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"QualityColorCompleted_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		// ***************************************************************************
 		// Rarity Default
@@ -4925,11 +4428,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityDefault"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_RarityDefault
 		{
@@ -4937,11 +4440,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityDefault"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_RarityDefault
 		{
@@ -4949,11 +4452,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityDefault_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_RarityDefault
 		{
@@ -4961,11 +4464,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityDefault_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		// ***************************************************
 		BackpackItemBorder_RarityCommon
@@ -4974,11 +4477,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityCommon"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_RarityCommon
 		{
@@ -4986,11 +4489,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityCommon"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_RarityCommon
 		{
@@ -4998,11 +4501,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityCommon_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_RarityCommon
 		{
@@ -5010,11 +4513,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityCommon_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		//
 		BackpackItemBorder_RarityUncommon
@@ -5023,11 +4526,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityUncommon"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_RarityUncommon
 		{
@@ -5035,11 +4538,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityUncommon"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_RarityUncommon
 		{
@@ -5047,11 +4550,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityUncommon_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_RarityUncommon
 		{
@@ -5059,11 +4562,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityUncommon_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		//**************
 		BackpackItemBorder_RarityRare
@@ -5072,11 +4575,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityRare"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_RarityRare
 		{
@@ -5084,11 +4587,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityRare"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_RarityRare
 		{
@@ -5096,11 +4599,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityRare_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_RarityRare
 		{
@@ -5108,11 +4611,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityRare_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		//******************
 		BackpackItemBorder_RarityMythical
@@ -5121,11 +4624,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityMythical"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_RarityMythical
 		{
@@ -5133,11 +4636,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityMythical"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_RarityMythical
 		{
@@ -5145,11 +4648,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityMythical_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_RarityMythical
 		{
@@ -5157,11 +4660,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityMythical_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		// ***************************************************
 		BackpackItemBorder_RarityLegendary
@@ -5170,11 +4673,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityLegendary"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_RarityLegendary
 		{
@@ -5182,11 +4685,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityLegendary"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_RarityLegendary
 		{
@@ -5194,11 +4697,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityLegendary_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_RarityLegendary
 		{
@@ -5206,11 +4709,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityLegendary_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		//*********************************************
 		BackpackItemBorder_RarityAncient
@@ -5219,11 +4722,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityAncient"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemMouseOverBorder_RarityAncient
 		{
@@ -5231,11 +4734,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityAncient"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutBorder_RarityAncient
 		{
@@ -5243,11 +4746,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityAncient_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 		BackpackItemGreyedOutSelectedBorder_RarityAncient
 		{
@@ -5255,11 +4758,11 @@ Scheme
 			"backgroundtype"		"2"
 			"color"					"ItemRarityAncient_GreyedOut"
 			
-			"image"					"replay/thumbnails/backpack/border_selected"
-			"src_corner_height"		"2"				// pixels inside the image
-			"src_corner_width"		"2"
-			"draw_corner_width"		"2"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"2"
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
 		}
 
 		StoreItemBorder
@@ -6209,6 +5712,7 @@ Scheme
 			}
 		}
 	}
+
 	//////////////////////// CUSTOM FONT FILES /////////////////////////////
 	//
 	// specifies all the custom (non-system) font files that need to be loaded to service the above described fonts

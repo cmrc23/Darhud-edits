@@ -62,10 +62,10 @@
 	{	
 		"ControlName"	"CExLabel"
 		"fieldName"		"CountdownLabel"
-		"font"			"HudFontMediumBigBold"
+		"font"			"HudFontGiant"
 		"xpos"			"cs-0.5"
 		"ypos"			"cs-0.1"
-		"wide"			"100"
+		"wide"			"40"
 		"tall"			"40"
 		"zpos"			"5"
 		"autoResize"	"0"
@@ -89,10 +89,10 @@
 	{	
 		"ControlName"	"CExLabel"
 		"fieldName"		"CountdownLabelShadow"
-		"font"			"HudFontMediumBigBold"
+		"font"			"HudFontGiant"
 		"xpos"			"cs-0.48"
 		"ypos"			"cs-0.08"
-		"wide"			"100"
+		"wide"			"40"
 		"tall"			"40"
 		"zpos"			"4"
 		"autoResize"	"0"
@@ -199,7 +199,7 @@
 	{
 		"fieldName"		"RoundCounter"
 		"xpos"			"cs-0.5"
-		"ypos"			"0"
+		"ypos"			"-2"
 		"zpos"			"1"		
 		"wide"			"300"
 		"tall"			"100"
@@ -214,8 +214,8 @@
 		"xpos"				"cs-0.5"
 		"ypos"				"-5"
 		"zpos"				"0"
-		"wide"				"0"
-		"tall"				"0"
+		"wide"				"365"
+		"tall"				"28"
 		"visible"			"0"
 
 		"proportionaltoaparent"	"1"
@@ -277,14 +277,21 @@
 	{
 		"ControlName"		"EditablePanel"
 		"fieldName"			"ObjectiveStatusTimePanel"
-		"xpos"				"cs-0.5"
-		"ypos"				"5"
+		"xpos"				"c-55"
+		"xpos_hidef"		"c-150"
+		"xpos_lodef"		"c-150"
+		"ypos"				"0"	[$WIN32]
+		"ypos_minmode"		"-14"	[$WIN32]
+		"ypos"				"24"	[$X360]
 		"zpos"				"2"
-		"wide"				"150"
-		"tall"				"100"
+		"wide"				"110"
+		"wide_hidef"		"300"
+		"wide_lodef"		"300"
+		"tall"				"150"
 		"visible"			"0"
 		"enabled"			"1"
-		"delta_item_x"			"22"
+		"delta_item_x"			"22"	[$WIN32]
+		"delta_item_x"			"115"	[$X360]
 		"delta_item_start_y"	"50"
 		"delta_item_end_y"		"70"
 		"PositiveColor"			"0 255 0 255"
@@ -295,8 +302,8 @@
 		if_match
 		{
 			"xpos"					"cs-0.5"
-			"ypos"					"0"
-			"wide"					"150"
+			"wide"					"130"
+			"ypos_minmode"			"0"
 			"delta_item_x"			"35"
 			"delta_item_start_y"	"12"
 			"delta_item_end_y"		"50"
@@ -310,13 +317,23 @@
 		{
 			"ControlName"		"CExLabel"
 			"fieldName"		"TimePanelValue"
-			"font"			"HudFontMediumSmallSecondary"
-			"fgcolor"		"ObjectiveLabel"
-			"xpos"			"45"
-			"ypos"			"0"
+			"font"			"HudFontMediumSmall"
+			"font_minmode"	"HudFontSmall"
+			"font_lodef"	"HudFontMedium"
+			"fgcolor"		"TanLight"
+			"xpos"			"23"
+			"xpos_minmode"	"39"
+			"xpos_hidef"	"114"
+			"xpos_lodef"	"114"
+			"ypos"			"11"
+			"ypos_minmode"	"6"
+			"ypos_hidef"	"15"
+			"ypos_lodef"	"18"
 			"zpos"			"3"
-			"wide"			"40"
-			"tall"			"20"
+			"wide"			"45"
+			"wide_minmode"	"30"
+			"wide_lodef"	"50"
+			"tall"			"31"
 			"visible"		"1"
 			"enabled"		"1"
 			"textAlignment"		"center"
@@ -327,9 +344,12 @@
 				"proportionaltoparent"	"1"
 
 				"xpos"			"cs-0.5"
-				"ypos"			"11"
+				"ypos"			"12"
+				"ypos_minmode"	"12"
 				"tall"			"10"
 				"font"			"HudFontSmall"
+				"font_minmode"	"HudFontSmall"
+				"font_lodef"	"HudFontSmall"
 			}
 		}	
 	}
@@ -366,11 +386,11 @@
 			"tall"			"50"
 			"zpos"			"1"
 
-			"color_portrait_bg_red"	"HUDRedTeamSolid"
-			"color_portrait_bg_blue"	"HUDBlueTeamSolid"
+			"color_portrait_bg_red"	"119 62 61 255"
+			"color_portrait_bg_blue"	"62 81 101 255"
 			"color_portrait_bg_red_dead"	"79 54 52 255"
 			"color_portrait_bg_blue_dead"	"44 49 51 255"
-			"color_bar_health_high"	"0 131 17 255"
+			"color_bar_health_high"	"84 191 58 255"
 			"color_bar_health_med"	"191 183 58 255"
 			"percentage_health_med"	"0.6"
 			"color_bar_health_low"	"191 58 58 255"
@@ -438,7 +458,7 @@
 				"textAlignment"			"Left"
 				"dulltext"				"0"
 				"brighttext"			"0"
-				"bgcolor_override"	 	"MeterBackground"
+				"bgcolor_override"	   "80 80 80 255"
 				"proportionaltoparent"	"1"
 			}
 			"overhealbar"
@@ -459,7 +479,7 @@
 				"dulltext"				"0"
 				"brighttext"			"0"
 				"bgcolor_override"	   "0 0 0 0"
-				"fgcolor_override"	   "HealthGain"
+				"fgcolor_override"	   "255 255 255 160"
 				"proportionaltoparent"	"1"
 			}
 			"HealthIcon"
@@ -476,8 +496,8 @@
 				"HealthBonusPosAdj"	"10"
 				"HealthDeathWarning"		"0.49"
 				"TFFont"					"HudFontSmallest"
-				"HealthDeathWarningColor"	"HealthWarning"
-				"TextColor"					"HudOffMiscLabel"
+				"HealthDeathWarningColor"	"HUDDeathWarning"
+				"TextColor"					"HudOffWhite"
 			}
 			"ReadyBG"
 			{
@@ -518,7 +538,7 @@
 			{
 				"ControlName"	"CExLabel"
 				"fieldName"		"respawntime"
-				"font"			"PlayerPanelPlayerName"
+				"font"			"FontStoreOriginalPrice"
 				"xpos"			"cs-0.5"
 				"ypos"			"0"
 				"zpos"			"5"
